@@ -6,7 +6,6 @@ const tags = {
     CLEAN_UP: "Clean up",
     ELECTRIC: "Electrical",
     FRIENDS_FAMILY: 'Friends & Family',
-    FOYER: "Foyer",
     GARAGE: "Garage",
     IMPROVEMENTS: "Improvements",
     KITCHEN: "Kitchen",
