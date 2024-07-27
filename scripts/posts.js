@@ -391,6 +391,13 @@ const posts = [
         ],
         src: './posts/2023/230330.js'
     },
+    {   id: 230401, year: 2023, month: 4, day: 1,
+        menuText: "Snowdrop Flower",
+        tags: [
+            tags.PLANTS, tags.YARD
+        ],
+        src: './posts/2023/230401.js'
+    },
     {   id: 230402, year: 2023, month: 4, day: 2,
         menuText: "Cat House & Feeder Update",
         tags: [
