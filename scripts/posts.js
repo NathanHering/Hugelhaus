@@ -370,6 +370,13 @@ const posts = [
         ],
         src: './posts/2022/221113.js'
     },
+    {   id: 230113, year: 2023, month: 1, day: 13,
+        menuText: "Winter",
+        tags: [
+            tags.LITTLE_MOMENTS, tags.YARD
+        ],
+        src: './posts/2023/230113.js'
+    },
     {   id: 230215, year: 2023, month: 2, day: 15,
         menuText: "NE Yard Cleanup",
         tags: [
