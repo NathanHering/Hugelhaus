@@ -286,6 +286,13 @@ const posts = [
         ],
         src: './posts/2022/220813.js'
     },
+    {   id: 220815, year: 2022, month: 8, day: 15,
+        menuText: "Turkey Flock",
+        tags: [
+            tags.ANIMALS, tags.YARD
+        ],
+        src: './posts/2022/220815.js'
+    },
     {   id: 220820, year: 2022, month: 8, day: 20,
         menuText: "Fallen Oak Tree Removal",
         tags: [
