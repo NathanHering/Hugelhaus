@@ -433,6 +433,13 @@ const posts = [
         ],
         src: './posts/2023/230427.js'
     },
+    {   id: 230803, year: 2023, month: 8, day: 3,
+        menuText: "South Fence Cleanup",
+        tags: [
+            tags.CLEAN_UP, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2023/230803.js'
+    },
     {   id: 230828, year: 2023, month: 8, day: 28,
         menuText: "Vinyl Fence Removal (continued)",
         tags: [
