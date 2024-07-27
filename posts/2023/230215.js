@@ -4,7 +4,7 @@ let slides_230215 = JSON.stringify([
 ])
 
 content.innerHTML = `\
-    <h1>NE Yard</h1>\
+    <h1>NE Front Yard</h1>\
     <h5>Wednseday Feb 15 2023</h5>\
     <br>\
     <p>This is really just the before pictures. I plan to do some work in\
