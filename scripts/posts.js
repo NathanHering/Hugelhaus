@@ -384,6 +384,13 @@ const posts = [
         ],
         src: './posts/2023/230316.js'
     },
+    {   id: 230329, year: 2023, month: 3, day: 29,
+        menuText: "Tiny Snow People",
+        tags: [
+            tags.LITTLE_MOMENTS
+        ],
+        src: './posts/2023/230329.js'
+    },
     {   id: 230330, year: 2023, month: 3, day: 30,
         menuText: "First Burn",
         tags: [
