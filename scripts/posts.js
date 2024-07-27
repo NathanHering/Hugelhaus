@@ -378,7 +378,7 @@ const posts = [
         src: './posts/2023/230113.js'
     },
     {   id: 230215, year: 2023, month: 2, day: 15,
-        menuText: "NE Yard Cleanup",
+        menuText: "NE Front Yard Cleanup",
         tags: [
             tags.PROJECTS, tags.YARD
         ],
