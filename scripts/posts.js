@@ -391,6 +391,13 @@ const posts = [
         ],
         src: './posts/2023/230316.js'
     },
+    {   id: 230325, year: 2023, month: 3, day: 25,
+        menuText: "Water Heater Breakdown",
+        tags: [
+            tags.BASEMENT, tags.REPAIRS, tags.UTILITIES
+        ],
+        src: './posts/2023/230325.js'
+    },
     {   id: 230329, year: 2023, month: 3, day: 29,
         menuText: "Tiny Snow People",
         tags: [
