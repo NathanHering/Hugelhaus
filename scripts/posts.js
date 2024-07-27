@@ -482,7 +482,7 @@ const posts = [
         ],
         src: './posts/2023/230830.js'
     },
-    {   id: 230830, year: 2023, month: 9, day: 3,
+    {   id: 230903, year: 2023, month: 9, day: 3,
         menuText: "NW Yard Cleanup",
         tags: [
             tags.PROJECTS, tags.YARD
