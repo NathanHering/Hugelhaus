@@ -363,6 +363,13 @@ const posts = [
         ],
         src: './posts/2022/221113.js'
     },
+    {   id: 230215, year: 2023, month: 2, day: 15,
+        menuText: "NE Yard Cleanup",
+        tags: [
+            tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2023/230215.js'
+    },
     {   id: 230303, year: 2023, month: 3, day: 3,
         menuText: "Entertainment Wall Phase 1",
         tags: [
@@ -432,6 +439,13 @@ const posts = [
             tags.PROJECTS, tags.IMPROVEMENTS
         ],
         src: './posts/2023/230830.js'
+    },
+    {   id: 230830, year: 2023, month: 9, day: 3,
+        menuText: "NW Yard Cleanup",
+        tags: [
+            tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2023/230903.js'
     },
     {   id: 231020, year: 2023, month: 10, day: 20,
         menuText: "Kitchen Updgrade",
