@@ -18,4 +18,5 @@ const tags = {
     REPAIRS: "Repairs",
     UTILITIES: "Utilities",
     YARD: 'Yard',
+    YARD_UPDATE: 'Yard Update'
 }
