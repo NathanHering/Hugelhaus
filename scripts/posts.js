@@ -489,6 +489,13 @@ const posts = [
         ],
         src: './posts/2023/230903.js'
     },
+    {   id: 230923, year: 2023, month: 9, day: 23,
+        menuText: "A Little Sip",
+        tags: [
+            tags.ANIMALS, tags.BATHROOM, tags.LITTLE_MOMENTS
+        ],
+        src: './posts/2023/230923.js'
+    },
     {   id: 231020, year: 2023, month: 10, day: 20,
         menuText: "Kitchen Updgrade",
         tags: [
