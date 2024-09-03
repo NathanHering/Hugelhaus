@@ -489,6 +489,13 @@ const posts = [
         ],
         src: './posts/2023/230903.js'
     },
+    {   id: 230909, year: 2023, month: 9, day: 9,
+        menuText: "Apple Tree Cuttings",
+        tags: [
+            tags.PLANTS, tags.PROJECTS
+        ],
+        src: './posts/2023/230909.js'
+    },
     {   id: 230923, year: 2023, month: 9, day: 23,
         menuText: "A Little Sip",
         tags: [
