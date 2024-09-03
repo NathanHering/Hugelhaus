@@ -510,6 +510,13 @@ const posts = [
         ],
         src: './posts/2023/231012.js'
     },
+    {   id: 231016, year: 2023, month: 10, day: 16,
+        menuText: "Basil",
+        tags: [
+            tags.PLANTS, tags.PROJECTS
+        ],
+        src: './posts/2023/231016.js'
+    },
     {   id: 231018, year: 2023, month: 10, day: 18,
         menuText: "Beaver Work",
         tags: [
