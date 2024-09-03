@@ -496,6 +496,13 @@ const posts = [
         ],
         src: './posts/2023/230923.js'
     },
+    {   id: 231012, year: 2023, month: 10, day: 12,
+        menuText: "AC Replacement",
+        tags: [
+            tags.LIVINGROOM, tags.PROJECTS, tags.IMPROVEMENTS
+        ],
+        src: './posts/2023/231012.js'
+    },
     {   id: 231020, year: 2023, month: 10, day: 20,
         menuText: "Kitchen Updgrade",
         tags: [
