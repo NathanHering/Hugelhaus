@@ -55,6 +55,13 @@ const posts = [
         ],
         src: './posts/2021/210818.js'
     },
+    {   id: 210821, year: 2021, month: 8, day: 21,
+        menuText: "Back Yard Update",
+        tags: [
+            tags.MOVE_IN, tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
+        ],
+        src: './posts/2021/210821.js'
+    },
     {   id: 210906, year: 2021, month: 9, day: 6,
         menuText: "House Warming",
         tags: [
@@ -516,6 +523,13 @@ const posts = [
             tags.PLANTS, tags.PROJECTS
         ],
         src: './posts/2023/231016.js'
+    },
+    {   id: 231018, year: 2023, month: 10, day: 18,
+        menuText: "Back Yard Update",
+        tags: [
+            tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
+        ],
+        src: './posts/2023/231018.js'
     },
     {   id: 231018, year: 2023, month: 10, day: 19,
         menuText: "Beaver Work",
