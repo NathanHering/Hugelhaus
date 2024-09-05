@@ -531,7 +531,7 @@ const posts = [
         ],
         src: './posts/2023/231018.js'
     },
-    {   id: 231018, year: 2023, month: 10, day: 19,
+    {   id: 231019, year: 2023, month: 10, day: 19,
         menuText: "Beaver Work",
         tags: [
             tags.ANIMALS, tags.PLANTS, tags.YARD
