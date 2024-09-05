@@ -468,6 +468,13 @@ const posts = [
         ],
         src: './posts/2023/230427.js'
     },
+    {   id: 230607, year: 2023, month: 6, day: 7,
+        menuText: "Yume!",
+        tags: [
+            tags.ANIMALS, tags.LITTLE_MOMENTS
+        ],
+        src: './posts/2023/230607.js'
+    },
     {   id: 230803, year: 2023, month: 8, day: 3,
         menuText: "South Fence Cleanup",
         tags: [
