@@ -16,7 +16,7 @@ let slides_231019 = JSON.stringify([
 
 content.innerHTML = `\
     <h1>Beaver Work</h1>\
-    <h5>Wednesday October 18 2023</h5>\
+    <h5>Thursday October 19 2023</h5>\
     <br>\
     <p>Next to humans, beavers change their environment the most.</p>\
     <br>\
