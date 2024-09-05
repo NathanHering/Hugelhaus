@@ -1,4 +1,4 @@
-let slides_2310018 = JSON.stringify([
+let slides_231019 = JSON.stringify([
     ['/images/2023/10/20231018_173828.jpg','October 18th'],
     ['/images/2023/10/20231024_111055.jpg','October 24th'],
     ['/images/2023/10/20231024_111201.jpg','October 24th'],
@@ -33,5 +33,5 @@ content.innerHTML = `\
     more. I figured I'll see what they leave me with and address it next \
     year.</p>\
     <br>\
-    <div class='slides' data-sources='${slides_2310018}'></div>
+    <div class='slides' data-sources='${slides_231019}'></div>
 `
