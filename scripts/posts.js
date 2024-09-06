@@ -551,5 +551,12 @@ const posts = [
             tags.KITCHEN, tags.PLUMBING, tags.PROJECTS
         ],
         src: './posts/2023/231020.js'
+    },
+    {   id: 231220, year: 2023, month: 12, day: 20,
+        menuText: "Cat Friends",
+        tags: [
+            tags.ANIMALS, tags.LITTLE_MOMENTS
+        ],
+        src: './posts/2023/231220.js'
     }
 ]
