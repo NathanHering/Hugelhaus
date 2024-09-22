@@ -1,5 +1,14 @@
+let post = 
+    {   id: 240000, year: 2024, month: 0, day: 0,
+        menuText: "",
+        tags: [
+            
+        ],
+        src: './posts/2024/240000.js'
+    }
+
 let slides_000000 = JSON.stringify([
-    ['/images/2023/06/.jpg','caption']
+    ['/images/2024/01/.jpg','caption']
 ])
 
 content.innerHTML = `\
