@@ -538,6 +538,13 @@ const posts = [
         ],
         src: './posts/2023/231016.js'
     },
+    {   id: 231017, year: 2023, month: 10, day: 17,
+        menuText: "Front Yard Update",
+        tags: [
+            tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
+        ],
+        src: './posts/2023/231017.js'
+    },
     {   id: 231018, year: 2023, month: 10, day: 18,
         menuText: "Back Yard Update",
         tags: [
