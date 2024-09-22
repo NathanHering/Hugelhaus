@@ -566,6 +566,13 @@ const posts = [
         ],
         src: './posts/2023/231020.js'
     },
+    {   id: 231104, year: 2023, month: 11, day: 4,
+        menuText: "Fungus Among Us",
+        tags: [
+            tags.PLANTS, tags.YARD
+        ],
+        src: './posts/2023/231104.js'
+    },
     {   id: 231220, year: 2023, month: 12, day: 20,
         menuText: "Cat Friends",
         tags: [
