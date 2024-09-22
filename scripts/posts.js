@@ -510,6 +510,13 @@ const posts = [
         ],
         src: './posts/2023/230909.js'
     },
+    {   id: 230922, year: 2023, month: 9, day: 22,
+        menuText: "East Fence Clearing",
+        tags: [
+            tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2023/230922.js'
+    },
     {   id: 230923, year: 2023, month: 9, day: 23,
         menuText: "A Little Sip",
         tags: [
