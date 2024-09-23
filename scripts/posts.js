@@ -524,6 +524,13 @@ const posts = [
         ],
         src: './posts/2023/230916.js'
     },
+    {   id: 230921, year: 2023, month: 9, day: 21,
+        menuText: "NW Corner Fence Removal",
+        tags: [
+            tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2023/230921.js'
+    },
     {   id: 230922, year: 2023, month: 9, day: 22,
         menuText: "East Fence Clearing",
         tags: [
