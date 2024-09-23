@@ -538,6 +538,13 @@ const posts = [
         ],
         src: './posts/2023/230916.js'
     },
+    {   id: 230917, year: 2023, month: 9, day: 17,
+        menuText: "Thar Be Treasure!",
+        tags: [
+            tags.CLEAN_UP, tags.LITTLE_MOMENTS
+        ],
+        src: './posts/2023/230917.js'
+    },
     {   id: 230921, year: 2023, month: 9, day: 21,
         menuText: "NW Corner Fence Removal",
         tags: [
