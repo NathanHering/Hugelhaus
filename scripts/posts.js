@@ -566,6 +566,13 @@ const posts = [
         ],
         src: './posts/2023/230929.js'
     },
+    {   id: 231009, year: 2023, month: 10, day: 9,
+        menuText: "Stump Removal",
+        tags: [
+            tags.PLANTS, tags.YARD
+        ],
+        src: './posts/2023/231009.js'
+    },
     {   id: 231012, year: 2023, month: 10, day: 12,
         menuText: "AC Replacement",
         tags: [
