@@ -503,6 +503,13 @@ const posts = [
         ],
         src: './posts/2023/230903.js'
     },
+    {   id: 230908, year: 2023, month: 9, day: 8,
+        menuText: "Toilet",
+        tags: [
+            tags.CLEAN_UP, tags.PROJECTS
+        ],
+        src: './posts/2023/230908.js'
+    },
     {   id: 230909, year: 2023, month: 9, day: 9,
         menuText: "Apple Tree Cuttings",
         tags: [
