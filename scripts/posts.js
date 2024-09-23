@@ -531,6 +531,13 @@ const posts = [
         ],
         src: './posts/2023/230923.js'
     },
+    {   id: 230929, year: 2023, month: 9, day: 29,
+        menuText: "Late Summer Fire",
+        tags: [
+            tags.LITTLE_MOMENTS, tags.YARD
+        ],
+        src: './posts/2023/230929.js'
+    },
     {   id: 231012, year: 2023, month: 10, day: 12,
         menuText: "AC Replacement",
         tags: [
