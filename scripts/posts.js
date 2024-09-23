@@ -517,6 +517,13 @@ const posts = [
         ],
         src: './posts/2023/230911.js'
     },
+    {   id: 230912, year: 2023, month: 9, day: 12,
+        menuText: "Road Paving",
+        tags: [
+            tags.LITTLE_MOMENTS, tags.YARD
+        ],
+        src: './posts/2023/230912.js'
+    },
     {   id: 230914, year: 2023, month: 9, day: 14,
         menuText: "NE Corner Fence Removal",
         tags: [
