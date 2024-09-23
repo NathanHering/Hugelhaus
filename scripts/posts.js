@@ -615,6 +615,13 @@ const posts = [
         ],
         src: './posts/2023/231104.js'
     },
+    {   id: 231105, year: 2023, month: 11, day: 5,
+        menuText: "Pine Tree Base",
+        tags: [
+            tags.PLANTS, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2023/231105.js'
+    },
     {   id: 231220, year: 2023, month: 12, day: 20,
         menuText: "Cat Friends",
         tags: [
