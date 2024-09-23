@@ -552,6 +552,13 @@ const posts = [
         ],
         src: './posts/2023/230917.js'
     },
+    {   id: 230920, year: 2023, month: 9, day: 20,
+        menuText: "Turkey Flock",
+        tags: [
+            tags.ANIMALS, tags.LITTLE_MOMENTS
+        ],
+        src: './posts/2023/230920.js'
+    },
     {   id: 230921, year: 2023, month: 9, day: 21,
         menuText: "NW Corner Fence Removal",
         tags: [
