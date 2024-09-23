@@ -510,6 +510,13 @@ const posts = [
         ],
         src: './posts/2023/230909.js'
     },
+    {   id: 230911, year: 2023, month: 9, day: 11,
+        menuText: "Strawberry Patch",
+        tags: [
+            tags.PLANTS, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2023/230911.js'
+    },
     {   id: 230914, year: 2023, month: 9, day: 14,
         menuText: "NE Corner Fence Removal",
         tags: [
