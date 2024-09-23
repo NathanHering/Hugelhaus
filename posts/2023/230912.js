@@ -12,7 +12,7 @@ content.innerHTML = `\
     <br>\
     <p>There are pros and cons to this paving.</p>\
     <br>\
-    <p>One one hand, it\'s nice to have the road smoothly \
+    <p>One one hand, it's nice to have the road smoothly \
     paved. However, the gravel they put on the shoulder of the \
     road made my ditch much harder to mow.</p>\
     <br>\

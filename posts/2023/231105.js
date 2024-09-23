@@ -20,7 +20,7 @@ content.innerHTML = `\
     <p>Phase one is to ammend the soil.</p>\
     <br>\
     <p>Once the soil here is a little better condition \
-    I can plant Lambs Ear. I'm hoping that\'ll look nice and \
+    I can plant Lambs Ear. I'm hoping that'll look nice and \
     grow well under this pine.</p>\
     <br>\
     <div class='slides' data-sources='${slides_231105}'></div>

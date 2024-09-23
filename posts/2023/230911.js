@@ -25,7 +25,7 @@ content.innerHTML = `\
     <p>It was kind of a last ditch effort.</p>\
     <br>\
     <p>I started growing these indoors quite a bit earlier \
-    this year. I didn\'t really have a plan for where to put \
+    this year. I didn't really have a plan for where to put \
     them once I discovered that the soild is really packed clay \
     all around the septic tank lids. I was hoping to put them \
     there initially. So, this is what I decided to do with them \
