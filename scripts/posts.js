@@ -726,5 +726,12 @@ const posts = [
             tags.ANIMALS, tags.LITTLE_MOMENTS
         ],
         src: './posts/2024/240721.js'
+    },
+    {   id: 240722, year: 2024, month: 7, day: 22,
+        menuText: "Strawberry Stump Grass",
+        tags: [
+            tags.PLANTS, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2024/240722.js'
     }
 ]
