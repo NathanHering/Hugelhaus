@@ -734,6 +734,13 @@ const posts = [
         ],
         src: './posts/2024/240509.js'
     },
+    {   id: 240515, year: 2024, month: 5, day: 15,
+        menuText: "Cat v Rabbit",
+        tags: [
+            tags.ANIMALS
+        ],
+        src: './posts/2024/240515.js'
+    },
     {   id: 240522, year: 2024, month: 5, day: 22,
         menuText: "East Fence Clearing 2",
         tags: [
