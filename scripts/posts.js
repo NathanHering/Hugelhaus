@@ -706,6 +706,13 @@ const posts = [
         ],
         src: './posts/2024/240311.js'
     },
+    {   id: 240509, year: 2024, month: 5, day: 9,
+        menuText: "Random FLower",
+        tags: [
+            tags.PLANTS
+        ],
+        src: './posts/2024/240509.js'
+    },
     {   id: 240609, year: 2024, month: 6, day: 9,
         menuText: "Vole Damage Control",
         tags: [
