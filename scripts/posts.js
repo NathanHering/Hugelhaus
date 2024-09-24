@@ -769,6 +769,13 @@ const posts = [
         ],
         src: './posts/2024/240624.js'
     },
+    {   id: 240712, year: 2024, month: 7, day: 12,
+        menuText: "Cicada",
+        tags: [
+            tags.ANIMALS
+        ],
+        src: './posts/2024/240712.js'
+    },
     {   id: 240721, year: 2024, month: 7, day: 21,
         menuText: "Under Fire",
         tags: [
