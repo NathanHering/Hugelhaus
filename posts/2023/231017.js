@@ -1,12 +1,3 @@
-let p = 
-    {   id: 231017, year: 2023, month: 10, day: 17,
-        menuText: "Front Yard Update",
-        tags: [
-            tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
-        ],
-        src: './posts/2023/231017.js'
-    }
-
 let slides_231017 = JSON.stringify([
     ['/images/2023/10/20231018_174122.jpg','From the NW corner facing east'],
     ['/images/2023/10/20231018_174125.jpg','From the NW corner facing southeast'],

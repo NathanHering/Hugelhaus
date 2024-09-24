@@ -1,12 +1,3 @@
-let p = 
-    {   id: 230930, year: 2023, month: 9, day: 30,
-        menuText: "Tree Removal",
-        tags: [
-            tags.CLEAN_UP, tags.PROJECTS, tags.YARD
-        ],
-        src: './posts/2023/230930.js'
-    }
-
 let slides_230930 = JSON.stringify([
     ['/images/2023/09/20230911_160122.jpg','Burn most of the small branches.'],
     ['/images/2023/09/20230911_160233.jpg','Burn most of the small branches.'],
