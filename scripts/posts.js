@@ -692,6 +692,13 @@ const posts = [
         ],
         src: './posts/2023/231220.js'
     },
+    {   id: 240216, year: 2024, month: 2, day: 16,
+        menuText: "Plants",
+        tags: [
+            tags.PLANTS, tags.PROJECTS
+        ],
+        src: './posts/2024/240216.js'
+    },
     {   id: 240223, year: 2024, month: 2, day: 23,
         menuText: "Update Seed Station",
         tags: [
