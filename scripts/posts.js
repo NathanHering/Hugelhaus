@@ -698,5 +698,12 @@ const posts = [
             tags.ANIMALS, tags.PLANTS
         ],
         src: './posts/2024/240223.js'
+    },
+    {   id: 240609, year: 2024, month: 6, day: 9,
+        menuText: "Vole Damage Control",
+        tags: [
+            tags.ANIMALS, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2024/240609.js'
     }
 ]
