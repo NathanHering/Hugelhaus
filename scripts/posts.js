@@ -734,6 +734,13 @@ const posts = [
         ],
         src: './posts/2024/240509.js'
     },
+    {   id: 240522, year: 2024, month: 5, day: 22,
+        menuText: "East Fence Clearing 2",
+        tags: [
+            tags.CLEAN_UP, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2024/240522.js'
+    },
     {   id: 240607, year: 2024, month: 6, day: 7,
         menuText: "Raised Fire Pit Area",
         tags: [
