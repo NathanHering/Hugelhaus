@@ -713,6 +713,13 @@ const posts = [
         ],
         src: './posts/2024/240311.js'
     },
+    {   id: 240508, year: 2024, month: 5, day: 8,
+        menuText: "Geese",
+        tags: [
+            tags.ANIMALS, tags.YARD
+        ],
+        src: './posts/2024/240508.js'
+    },
     {   id: 240509, year: 2024, month: 5, day: 9,
         menuText: "Random FLower",
         tags: [
