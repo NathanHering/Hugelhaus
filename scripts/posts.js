@@ -741,6 +741,13 @@ const posts = [
         ],
         src: './posts/2024/240620.js'
     },
+    {   id: 240624, year: 2024, month: 6, day: 24,
+        menuText: "Lower Yard Cleanup",
+        tags: [
+            tags.CLEAN_UP, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2024/240624.js'
+    },
     {   id: 240721, year: 2024, month: 7, day: 21,
         menuText: "Under Fire",
         tags: [
