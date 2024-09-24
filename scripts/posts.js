@@ -699,6 +699,13 @@ const posts = [
         ],
         src: './posts/2024/240223.js'
     },
+    {   id: 240311, year: 2024, month: 3, day: 11,
+        menuText: "Tom",
+        tags: [
+            tags.ANIMALS
+        ],
+        src: './posts/2024/240311.js'
+    },
     {   id: 240609, year: 2024, month: 6, day: 9,
         menuText: "Vole Damage Control",
         tags: [
