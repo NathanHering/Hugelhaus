@@ -713,6 +713,13 @@ const posts = [
         ],
         src: './posts/2024/240509.js'
     },
+    {   id: 240607, year: 2024, month: 6, day: 7,
+        menuText: "Raised Fir-pit Area",
+        tags: [
+            tags.CLEAN_UP, tags.PROJECTS, tags.YARD
+        ],
+        src: './posts/2024/240607.js'
+    },
     {   id: 240609, year: 2024, month: 6, day: 9,
         menuText: "Vole Damage Control",
         tags: [
