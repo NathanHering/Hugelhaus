@@ -1,18 +1,18 @@
 let slides_220926 = JSON.stringify([
     ['/images/2022/09/20220927_093805.jpg','From the NE corner facing south.'],
-    ['/images/2022/09/20220927_093808.jpg','From the NE corner facing southeast.'],
+    ['/images/2022/09/20220927_093808.jpg','From the NE corner facing southwest.'],
     ['/images/2022/09/20220927_093811.jpg','From the NE corner facing west.'],
 
     ['/images/2022/09/20220927_093942.jpg','From the NW corner facing east.'],
     ['/images/2022/09/20220927_093945.jpg','From the NW corner facing southeast.'],
-    ['/images/2022/09/20220927_093955.jpg','From the NW corner facing west.'],
+    ['/images/2022/09/20220927_093955.jpg','From the NW corner facing south.'],
 
     ['/images/2022/09/20220927_094108.jpg','From the SW corner facing north.'],
     ['/images/2022/09/20220927_094113.jpg','From the SW corner facing northeast.'],
-    ['/images/2022/09/20220927_094118.jpg','From the SW corner facing west.'],
+    ['/images/2022/09/20220927_094118.jpg','From the SW corner facing east.'],
 
-    ['/images/2022/09/20220927_094221.jpg','From the SE corner facing east.'],
-    ['/images/2022/09/20220927_094224.jpg','From the SE corner facing northeast.'],
+    ['/images/2022/09/20220927_094221.jpg','From the SE corner facing west.'],
+    ['/images/2022/09/20220927_094224.jpg','From the SE corner facing northwest.'],
     ['/images/2022/09/20220927_094226.jpg','From the SE corner facing north.'],
 
     ['/images/2022/09/20220926_150324.jpg','From the livingroom, I caught a picture of a rainbow.']

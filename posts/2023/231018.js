@@ -1,15 +1,15 @@
 let slides_231018 = JSON.stringify([
     ['/images/2023/10/20231018_173937.jpg','From the NE corner facing south.'],
-    ['/images/2023/10/20231018_173935.jpg','From the NE corner facing southeast.'],
+    ['/images/2023/10/20231018_173935.jpg','From the NE corner facing southwest.'],
     ['/images/2023/10/20231018_173932.jpg','From the NE corner facing west.'],
     ['/images/2023/10/20231018_173759.jpg','From the NW corner facing east.'],
     ['/images/2023/10/20231018_173757.jpg','From the NW corner facing southeast.'],
-    ['/images/2023/10/20231018_173754.jpg','From the NW corner facing west.'],
+    ['/images/2023/10/20231018_173754.jpg','From the NW corner facing south.'],
     ['/images/2023/10/20231018_173643.jpg','From the SW corner facing north.'],
     ['/images/2023/10/20231018_173641.jpg','From the SW corner facing northeast.'],
-    ['/images/2023/10/20231018_173637.jpg','From the SW corner facing west.'],
-    ['/images/2023/10/20231018_174033.jpg','From the SE corner facing east.'],
-    ['/images/2023/10/20231018_174031.jpg','From the SE corner facing northeast.'],
+    ['/images/2023/10/20231018_173637.jpg','From the SW corner facing east.'],
+    ['/images/2023/10/20231018_174033.jpg','From the SE corner facing west.'],
+    ['/images/2023/10/20231018_174031.jpg','From the SE corner facing northwest.'],
     ['/images/2023/10/20231018_174029.jpg','From the SE corner facing north.']
 ])
 
