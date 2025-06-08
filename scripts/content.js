@@ -300,6 +300,8 @@ class Slide {
         this.sources = JSON.parse(this.ele.dataset.sources)
         this.localPath = this.sources[0][0]
         this.currentIndex = 0
+        this.isMaximized = false
+        this.minMax
         this.buildPresentationElements()
         this.changeSource()
     }

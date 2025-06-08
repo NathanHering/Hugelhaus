@@ -262,33 +262,43 @@ label {
     display: grid;
     grid-template-areas: "left . right" "img img img" "caption caption caption";
     border: solid 2px #111;
-    border-radius: 8px;
+    border-top: none;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
     background-color: #111;
 }
 
 .slides .left, .slides .right {
     user-select: none;
-    color: #95ccff;
+    --webkit-user-select: none;
+    color: #000000;
     font-size: 2.6em;
-    height: 1em;
-    border-radius: 50%;
-    margin-top: -6px;
-    margin-bottom: -8px;
-    padding: 0 4px;
+    height: 0;
+    position: relative;
+    /* border-radius: 50%; */
+    /* margin-top: -6px; */
+    /* margin-bottom: -8px; */
+    /* padding: 0 4px; */
     cursor: pointer;
 }
 
 .left {
     grid-area: left;
+    top: 0;
+    left: .5rem;
+    text-shadow: white 0 0 2px;
 }
 
 .right {
     grid-area: right;
+    top: 0;
+    right: .5rem;
+    text-shadow: white 0 0 2px;
 }
 
 img {
     grid-area: img;
-    padding-top: 10px;
+    padding-top: .1rem;
 }
 
 .caption {
