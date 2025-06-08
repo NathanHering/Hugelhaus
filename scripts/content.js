@@ -79,7 +79,7 @@ class Content {
         if(this.post)
         {
             this.addTagsSection(container)
-            this.addCommentsSection(container)
+            // this.addCommentsSection(container)
         }
     }
 
@@ -120,149 +120,149 @@ class Content {
         container.appendChild(ele)
     }
 
-    addCommentsSection(container)
-    {
-        let ele = document.createElement('fieldset')
-        ele.classList.add('comments')
+    // addCommentsSection(container)
+    // {
+    //     let ele = document.createElement('fieldset')
+    //     ele.classList.add('comments')
 
-        let legend = document.createElement('legend')
-        legend.classList.add('legend')
-        legend.innerText = 'COMMENTS'
+    //     let legend = document.createElement('legend')
+    //     legend.classList.add('legend')
+    //     legend.innerText = 'COMMENTS'
         
-        ele.appendChild(legend)
-        ele.appendChild(this.commentInput)
-        ele.appendChild(this.commentSaveButton)
-        ele.appendChild(this.commentsDiv)
+    //     ele.appendChild(legend)
+    //     ele.appendChild(this.commentInput)
+    //     ele.appendChild(this.commentSaveButton)
+    //     ele.appendChild(this.commentsDiv)
 
-        container.appendChild(ele)
-        this.loadComments()
-    }
+    //     container.appendChild(ele)
+    //     this.loadComments()
+    // }
 
-    get commentInput()
-    {
-        let txtArea = document.createElement('textarea')
-        txtArea.id = 'newComment'
-        txtArea.classList.add('comment')
-        if (funtilityApi.userIsSignedIn)
-        {
-            txtArea.placeholder = 'Care to comment'
-        } else {
-            funtilityApi.signOut
-            txtArea.placeholder = 'You must be signed in to comment.'
-            txtArea.setAttribute('disabled', true)
-        }
-        return txtArea
-    }
+    // get commentInput()
+    // {
+    //     let txtArea = document.createElement('textarea')
+    //     txtArea.id = 'newComment'
+    //     txtArea.classList.add('comment')
+    //     if (funtilityApi.userIsSignedIn)
+    //     {
+    //         txtArea.placeholder = 'Care to comment'
+    //     } else {
+    //         funtilityApi.signOut
+    //         txtArea.placeholder = 'You must be signed in to comment.'
+    //         txtArea.setAttribute('disabled', true)
+    //     }
+    //     return txtArea
+    // }
 
-    get commentSaveButton()
-    {
-        if (funtilityApi.userIsSignedIn)
-        {
-            let btn = document.createElement('button')
-            btn.classList.add('save-comment')
-            btn.innerText = 'Save Comment'
-            btn.addEventListener('click', () => {
-                this.saveComment()
-            })
-            return btn
-        } else {
-            return document.createElement('div')
-        }
-    }
+    // get commentSaveButton()
+    // {
+    //     if (funtilityApi.userIsSignedIn)
+    //     {
+    //         let btn = document.createElement('button')
+    //         btn.classList.add('save-comment')
+    //         btn.innerText = 'Save Comment'
+    //         btn.addEventListener('click', () => {
+    //             this.saveComment()
+    //         })
+    //         return btn
+    //     } else {
+    //         return document.createElement('div')
+    //     }
+    // }
 
-    saveComment()
-    {
-        let body = this.saveCommentBody()
-        if (body)
-        {
-            let commentsDiv = document.getElementById('comments')
-            funtilityApi
-                .POST('Hugelhaus/Comment',body)
-                .then((res) => {
-                    commentsDiv.prepend(this.comment(res.result))
-                })
-        }
-    }
+    // saveComment()
+    // {
+    //     let body = this.saveCommentBody()
+    //     if (body)
+    //     {
+    //         let commentsDiv = document.getElementById('comments')
+    //         funtilityApi
+    //             .POST('Hugelhaus/Comment',body)
+    //             .then((res) => {
+    //                 commentsDiv.prepend(this.comment(res.result))
+    //             })
+    //     }
+    // }
 
-    saveCommentBody()
-    {
-        let commentEle = document.getElementById('newComment')
-        if(!this.post || !this.post.id || !commentEle.value) {
-            return {}
-        } else {
-            let result = {
-                'Id': 0,
-                'UserPublicId': '',
-                'PostId': `${this.post.id}`,
-                'TimeStamp': '',
-                'Content': commentEle.value
-            }
-            commentEle.value = ''
-            return result 
-        }
-    }
+    // saveCommentBody()
+    // {
+    //     let commentEle = document.getElementById('newComment')
+    //     if(!this.post || !this.post.id || !commentEle.value) {
+    //         return {}
+    //     } else {
+    //         let result = {
+    //             'Id': 0,
+    //             'UserPublicId': '',
+    //             'PostId': `${this.post.id}`,
+    //             'TimeStamp': '',
+    //             'Content': commentEle.value
+    //         }
+    //         commentEle.value = ''
+    //         return result 
+    //     }
+    // }
 
-    get commentsDiv()
-    {
-        let result = document.createElement('div')
-        result.id = 'comments'
-        return result
-    }
+    // get commentsDiv()
+    // {
+    //     let result = document.createElement('div')
+    //     result.id = 'comments'
+    //     return result
+    // }
 
-    loadComments()
-    {
-        let commentsDiv = document.getElementById('comments')
-        funtilityApi
-            .GET('Hugelhaus/Comments',[['postId',this.post.id]])
-            .then((res) => {
-                res.result.sort(this.compareComment)
-                res.result.forEach((comment) => {
-                    commentsDiv.appendChild(this.comment(comment))
-                })
-            })
-    }
+    // loadComments()
+    // {
+    //     let commentsDiv = document.getElementById('comments')
+    //     funtilityApi
+    //         .GET('Hugelhaus/Comments',[['postId',this.post.id]])
+    //         .then((res) => {
+    //             res.result.sort(this.compareComment)
+    //             res.result.forEach((comment) => {
+    //                 commentsDiv.appendChild(this.comment(comment))
+    //             })
+    //         })
+    // }
 
-    compareComment(a,b)
-    {
-        if(a.commentId < b.commentId) return 1
-        if(a.commentId > b.commentId) return -1
-        return 0
-    }
+    // compareComment(a,b)
+    // {
+    //     if(a.commentId < b.commentId) return 1
+    //     if(a.commentId > b.commentId) return -1
+    //     return 0
+    // }
 
-    comment(comment)
-    {
-        let container = document.createElement('div')
-        container.id = comment.commentId
-        container.classList.add('comment')
+    // comment(comment)
+    // {
+    //     let container = document.createElement('div')
+    //     container.id = comment.commentId
+    //     container.classList.add('comment')
 
-        let name = document.createElement('div')
-        name.classList.add('name')
-        name.innerText = comment.userName
-        container.appendChild(name)
+    //     let name = document.createElement('div')
+    //     name.classList.add('name')
+    //     name.innerText = comment.userName
+    //     container.appendChild(name)
 
-        let time = document.createElement('div')
-        time.classList.add('time')
-        time.innerText= this.parseTimeStamp(comment.timeStamp)
-        container.appendChild(time)
+    //     let time = document.createElement('div')
+    //     time.classList.add('time')
+    //     time.innerText= this.parseTimeStamp(comment.timeStamp)
+    //     container.appendChild(time)
 
-        let text = document.createElement('div')
-        text.classList.add('comment-content')
-        text.innerText = comment.content
-        container.appendChild(text)
+    //     let text = document.createElement('div')
+    //     text.classList.add('comment-content')
+    //     text.innerText = comment.content
+    //     container.appendChild(text)
 
-        container.dataset.comment = JSON.stringify(comment)
-        return container
-    }
+    //     container.dataset.comment = JSON.stringify(comment)
+    //     return container
+    // }
 
-    parseTimeStamp(timeStamp)
-    {
-        let n = timeStamp.split('-')
-        let mnth = Number(n[1]) - 1
-        let date = new Date(Date.UTC(n[0],mnth,n[2],n[3],n[4])).toString()
-        let l = date.split(' ')
-        let t = l[4].split(':')
-        return `${l[0]} ${l[1]} ${l[2]} ${l[3]}`
-    }
+    // parseTimeStamp(timeStamp)
+    // {
+    //     let n = timeStamp.split('-')
+    //     let mnth = Number(n[1]) - 1
+    //     let date = new Date(Date.UTC(n[0],mnth,n[2],n[3],n[4])).toString()
+    //     let l = date.split(' ')
+    //     let t = l[4].split(':')
+    //     return `${l[0]} ${l[1]} ${l[2]} ${l[3]}`
+    // }
 
     resize(){
         let container = document.querySelector('.container')

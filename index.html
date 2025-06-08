@@ -7,9 +7,9 @@
         <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
         
         <!--Add the next four links for the Funtility functionality.-->
-        <link async rel="stylesheet" href="https://funtility.github.io/identity/ui.css">
-        <script src="https://funtility.github.io/identity/ui.js"></script>
-        <script src="https://funtility.github.io/identity/api.js"></script>
+        <!-- <link async rel="stylesheet" href="https://funtility.github.io/identity/ui.css"> -->
+        <!-- <script src="https://funtility.github.io/identity/ui.js"></script> -->
+        <!-- <script src="https://funtility.github.io/identity/api.js"></script> -->
 
         <script src="./scripts/tags.js?v=1"></script>
         <script src="./scripts/posts.js?v=1"></script>
@@ -36,8 +36,8 @@
         let funtilityApi, funtilityUi, menu, content
         window.onload = () => {
             // detect if this is the development environment or hosted on a server
-            funtilityApi = window.location.host ? new FuntilityAPI("Hügelhaus") : new FuntilityAPI("Hügelhaus",'http://localhost:5194/')
-            funtilityUi = new FuntilityUI(funtilityApi)
+            // funtilityApi = window.location.host ? new FuntilityAPI("Hügelhaus") : new FuntilityAPI("Hügelhaus",'http://localhost:5194/')
+            // funtilityUi = new FuntilityUI(funtilityApi)
             menu = new Menu()
             content = new Content()
             content.route()
