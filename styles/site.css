@@ -259,6 +259,8 @@ label {
 /* #region Slides */
 
 .slides {
+    user-select: none;
+    --webkit-user-select: none;
     display: grid;
     grid-template-areas: "left . right" "img img img" "caption caption caption";
     border: solid 2px #111;
@@ -269,8 +271,6 @@ label {
 }
 
 .slides .left, .slides .right {
-    user-select: none;
-    --webkit-user-select: none;
     color: #000000;
     font-size: 2.6em;
     height: 0;
