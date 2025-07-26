@@ -763,7 +763,7 @@ const posts = [
         src: './posts/2024/240609.js'
     },
     {   id: 240620, year: 2024, month: 6, day: 20,
-        menuText: "Turle Nest",
+        menuText: "Turtle Nest",
         tags: [
             tags.ANIMALS
         ],
