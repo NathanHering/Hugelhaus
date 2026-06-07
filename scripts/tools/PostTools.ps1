@@ -19,6 +19,24 @@ function Get-PostSpec {
     return $spec
 }
 
+function Get-RepoRoot {
+    $toolsPath = Split-Path -Parent $PSScriptRoot
+    return (Resolve-Path (Join-Path $toolsPath '..')).Path
+}
+
+function Resolve-RepoPath {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Path
+    )
+
+    if ([System.IO.Path]::IsPathRooted($Path)) {
+        return [System.IO.Path]::GetFullPath($Path)
+    }
+
+    return [System.IO.Path]::GetFullPath((Join-Path (Get-RepoRoot) $Path))
+}
+
 function Get-PostDateParts {
     param(
         [Parameter(Mandatory = $true)]
@@ -151,6 +169,31 @@ function Invoke-ImageMagickResize {
         [string]$OutputPath
     )
 
+    $magickCommand = Get-Command magick -ErrorAction SilentlyContinue
+    if ($null -eq $magickCommand) {
+        $fallbackPaths = @(
+            'C:\Program Files\ImageMagick-*\magick.exe',
+            'C:\Program Files (x86)\ImageMagick-*\magick.exe'
+        )
+
+        $magickExe = $null
+        foreach ($pattern in $fallbackPaths) {
+            $found = Get-ChildItem -Path $pattern -ErrorAction SilentlyContinue |
+                Sort-Object LastWriteTime -Descending |
+                Select-Object -First 1
+            if ($found) {
+                $magickExe = $found.FullName
+                break
+            }
+        }
+
+        if ($null -eq $magickExe) {
+            throw "ImageMagick was not found. Install it and ensure 'magick' is in PATH. For Windows: winget install ImageMagick.ImageMagick"
+        }
+    } else {
+        $magickExe = $magickCommand.Source
+    }
+
     $arguments = @($SourcePath, '-auto-orient', '-resize', '1000x')
     $extension = [System.IO.Path]::GetExtension($OutputPath).ToLowerInvariant()
     if ($extension -in @('.jpg', '.jpeg')) {
@@ -158,7 +201,7 @@ function Invoke-ImageMagickResize {
     }
     $arguments += $OutputPath
 
-    & magick @arguments
+    & $magickExe @arguments
     if ($LASTEXITCODE -ne 0) {
         throw 'ImageMagick returned a non-zero exit code.'
     }

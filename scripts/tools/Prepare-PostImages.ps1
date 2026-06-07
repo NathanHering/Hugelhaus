@@ -13,11 +13,11 @@ if (-not $Apply -and -not $DryRun) {
     $DryRun = $true
 }
 
-$specPath = [System.IO.Path]::GetFullPath((Join-Path (Get-Location) $Spec))
+$specPath = Resolve-RepoPath -Path $Spec
 $postSpec = Get-PostSpec -SpecPath $specPath
 Assert-SpecHasImages -PostSpec $postSpec
 $postDate = Get-PostDateParts -PostDate $postSpec.postDate
-$outputDir = Join-Path (Join-Path (Join-Path (Get-Location) 'images') $postDate.YearText) $postDate.MonthText
+$outputDir = Join-Path (Join-Path (Join-Path (Get-RepoRoot) 'images') $postDate.YearText) $postDate.MonthText
 $webDir = "/images/$($postDate.YearText)/$($postDate.MonthText)"
 $usedNames = New-Object 'System.Collections.Generic.HashSet[string]'
 $images = Get-OrderedImages -Images (Get-AllSpecImages -PostSpec $postSpec)
@@ -29,7 +29,7 @@ for ($index = 0; $index -lt $images.Count; $index++) {
         throw "images[$index] is missing required property: sourcePath"
     }
 
-    $sourcePath = [System.IO.Path]::GetFullPath((Join-Path (Get-Location) ([string]$image.sourcePath)))
+    $sourcePath = Resolve-RepoPath -Path ([string]$image.sourcePath)
     if (-not (Test-Path -LiteralPath $sourcePath)) {
         throw "Source image does not exist: $($image.sourcePath)"
     }
@@ -52,8 +52,8 @@ if ($DryRun) {
     'Dry run image processing plan:'
     $plan | ForEach-Object {
         [pscustomobject]@{
-            source = [System.IO.Path]::GetRelativePath((Get-Location).Path, $_.SourcePath)
-            destination = [System.IO.Path]::GetRelativePath((Get-Location).Path, $_.OutputPath)
+            source = [System.IO.Path]::GetRelativePath((Get-RepoRoot), $_.SourcePath)
+            destination = [System.IO.Path]::GetRelativePath((Get-RepoRoot), $_.OutputPath)
             webPath = $_.WebPath
         }
     } | ConvertTo-Json -Depth 5
@@ -68,4 +68,4 @@ foreach ($item in $plan) {
 }
 
 Set-Content -LiteralPath $specPath -Value (ConvertTo-SpecJson -Spec $postSpec)
-Write-Output ("Resized {0} image(s) and updated spec: {1}" -f $plan.Count, [System.IO.Path]::GetRelativePath((Get-Location).Path, $specPath))
+Write-Output ("Resized {0} image(s) and updated spec: {1}" -f $plan.Count, [System.IO.Path]::GetRelativePath((Get-RepoRoot), $specPath))

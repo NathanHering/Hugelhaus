@@ -115,23 +115,23 @@ function Get-RegistrySnippet {
     return $lines -join "`n"
 }
 
-$specPath = [System.IO.Path]::GetFullPath((Join-Path (Get-Location) $Spec))
+$specPath = Resolve-RepoPath -Path $Spec
 $postSpec = Get-PostSpec -SpecPath $specPath
 if (-not $postSpec.menuText -or -not $postSpec.title) {
     throw 'Spec file requires both menuText and title'
 }
 Assert-SpecHasImages -PostSpec $postSpec
 $postDate = Get-PostDateParts -PostDate $postSpec.postDate
-$postDirectory = Join-Path (Join-Path (Get-Location) 'posts') ([string]$postDate.Year)
+$postDirectory = Join-Path (Join-Path (Get-RepoRoot) 'posts') ([string]$postDate.Year)
 $postPath = Join-Path $postDirectory "$($postDate.Id).js"
 
 if ((Test-Path -LiteralPath $postPath) -and -not $Overwrite) {
-    throw "Post file already exists: $([System.IO.Path]::GetRelativePath((Get-Location).Path, $postPath)). Use -Overwrite to replace it."
+    throw "Post file already exists: $([System.IO.Path]::GetRelativePath((Get-RepoRoot), $postPath)). Use -Overwrite to replace it."
 }
 
 $content = Get-PostFileContent -SpecData $postSpec -PostDate $postDate
 if ($DryRun) {
-    Write-Output ("Dry run post generation target: {0}" -f [System.IO.Path]::GetRelativePath((Get-Location).Path, $postPath))
+    Write-Output ("Dry run post generation target: {0}" -f [System.IO.Path]::GetRelativePath((Get-RepoRoot), $postPath))
     'Preview first 20 lines:'
     ($content -split "`n" | Select-Object -First 20) -join "`n"
     'Add this entry to scripts/posts.js:'
@@ -141,6 +141,6 @@ if ($DryRun) {
 
 New-DirectoryIfMissing -Path $postDirectory
 Set-Content -LiteralPath $postPath -Value $content
-Write-Output ("Created post file: {0}" -f [System.IO.Path]::GetRelativePath((Get-Location).Path, $postPath))
+Write-Output ("Created post file: {0}" -f [System.IO.Path]::GetRelativePath((Get-RepoRoot), $postPath))
 'Add this entry to scripts/posts.js:'
 Get-RegistrySnippet -SpecData $postSpec -PostDate $postDate

@@ -35,20 +35,20 @@ function Get-RegistryEntry {
     return $lines -join "`n"
 }
 
-$specPath = [System.IO.Path]::GetFullPath((Join-Path (Get-Location) $Spec))
+$specPath = Resolve-RepoPath -Path $Spec
 $postSpec = Get-PostSpec -SpecPath $specPath
 if (-not $postSpec.menuText) {
     throw 'Spec file must include menuText'
 }
 $postDate = Get-PostDateParts -PostDate $postSpec.postDate
-$allowedTags = Get-AllowedTagNames -TagsFilePath (Join-Path (Join-Path (Get-Location) 'scripts') 'tags.js')
+$allowedTags = Get-AllowedTagNames -TagsFilePath (Join-Path (Join-Path (Get-RepoRoot) 'scripts') 'tags.js')
 foreach ($tag in @($postSpec.tags)) {
     if (-not $allowedTags.Contains([string]$tag)) {
         throw "Unknown tag in spec: $tag"
     }
 }
 
-$postsPath = Join-Path (Join-Path (Get-Location) 'scripts') 'posts.js'
+$postsPath = Join-Path (Join-Path (Get-RepoRoot) 'scripts') 'posts.js'
 $postsContent = Get-Content -LiteralPath $postsPath -Raw
 if ($postsContent -match ("\bid:\s*{0}\b" -f $postDate.Id)) {
     throw "Duplicate post id found in scripts/posts.js: $($postDate.Id)"
