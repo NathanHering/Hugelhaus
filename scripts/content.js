@@ -315,6 +315,9 @@ class Slide {
         }
 
         this.img = document.createElement('img')
+        this.img.addEventListener('dblclick',()=>{
+            this.toggleMaximize()
+        })
         this.ele.appendChild(this.img)
 
         this.caption = document.createElement('div')
@@ -368,6 +371,30 @@ class Slide {
     {
         this.img.src = `${this.Host}${this.sources[this.currentIndex][0]}`
         this.caption.innerText = this.sources[this.currentIndex][1]
+    }
+
+    toggleMaximize()
+    {
+        if (this.isMaximized)
+        {
+            this.minimize()
+        } else {
+            this.maximize()
+        }
+    }
+
+    maximize()
+    {
+        this.isMaximized = true
+        this.img.classList.add('maximized')
+        document.body.classList.add('slide-maximized')
+    }
+
+    minimize()
+    {
+        this.isMaximized = false
+        this.img.classList.remove('maximized')
+        document.body.classList.remove('slide-maximized')
     }
 
     /**

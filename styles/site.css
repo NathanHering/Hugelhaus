@@ -270,6 +270,10 @@ label {
     background-color: #111;
 }
 
+body.slide-maximized {
+    overflow: hidden;
+}
+
 .slides .left, .slides .right {
     color: #000000;
     font-size: 2.6em;
@@ -280,6 +284,24 @@ label {
     /* margin-bottom: -8px; */
     /* padding: 0 4px; */
     cursor: pointer;
+}
+
+.slides img {
+    cursor: zoom-in;
+}
+
+.slides img.maximized {
+    position: fixed;
+    inset: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain;
+    padding-top: 0 !important;
+    background-color: #111;
+    z-index: 1000;
+    cursor: zoom-out;
 }
 
 .left {
