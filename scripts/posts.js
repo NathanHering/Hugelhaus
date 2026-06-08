@@ -56,7 +56,7 @@ const posts = [
         src: './posts/2021/210818.js'
     },
     {   id: 210821, year: 2021, month: 8, day: 21,
-        menuText: "Back Yard Update",
+        menuText: "Backyard Update",
         tags: [
             tags.MOVE_IN, tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
         ],
@@ -322,7 +322,7 @@ const posts = [
         src: './posts/2022/220924.js'
     },
     {   id: 220926, year: 2022, month: 9, day: 26,
-        menuText: "Back Yard Update",
+        menuText: "Backyard Update",
         tags: [
             tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
         ],
@@ -343,7 +343,7 @@ const posts = [
         src: './posts/2022/221029.js'
     },
     {   id: 221030, year: 2022, month: 10, day: 30,
-        menuText: "Front Yard Update",
+        menuText: "Frontyard Update",
         tags: [
             tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
         ],
@@ -616,14 +616,14 @@ const posts = [
         src: './posts/2023/231016.js'
     },
     {   id: 231017, year: 2023, month: 10, day: 17,
-        menuText: "Front Yard Update",
+        menuText: "Frontyard Update",
         tags: [
             tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
         ],
         src: './posts/2023/231017.js'
     },
     {   id: 231018, year: 2023, month: 10, day: 18,
-        menuText: "Back Yard Update",
+        menuText: "Backyard Update",
         tags: [
             tags.PROJECTS, tags.YARD, tags.YARD_UPDATE
         ],
@@ -796,5 +796,15 @@ const posts = [
             tags.PLANTS, tags.PROJECTS, tags.YARD
         ],
         src: './posts/2024/240722.js'
+    },
+    {   id: 241020, year: 2024, month: 10, day: 20,
+        menuText: "Backyard Update",
+        tags: [
+            tags.PROJECTS,
+            tags.YARD,
+            tags.YARD_UPDATE,
+        ],
+        src: './posts/2024/241020.js'
     }
 ]
+

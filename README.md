@@ -54,7 +54,8 @@ The older flat shape (`bodyParagraphs` + `images`) is still supported for simple
 .\scripts\tools\Prepare-PostImages.ps1 -Spec post_queue/new-post.example.json -Apply
 ```
 
-This command resizes images to width 1000, writes them to `images/YYYY/MM`, and updates the spec with `webPath` values.
+This command resizes images to width 1000 and writes them to `images/YYYY/MM` based on the first six characters of each source file name (`YYYYMM`).
+The output file name is always the same as the source file name, and the spec is updated with matching `webPath` values.
 
 ### 3) Generate Post File
 

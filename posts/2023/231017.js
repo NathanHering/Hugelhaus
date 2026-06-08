@@ -14,10 +14,10 @@ let slides_231017 = JSON.stringify([
 ])
 
 content.innerHTML = `\
-    <h1>Front Yard</h1>\
+    <h1>Frontyard</h1>\
     <h5>Wednesday October 18 2023</h5>\
     <br>\
-    <p>I didn't do very much in the front yard over the year. I did some \
+    <p>I didn't do very much in the frontyard over the year. I did some \
     work under the pine tree, and I had some stumps removed by the ditch \
     near the utility pole.</p>\
     <br>\
