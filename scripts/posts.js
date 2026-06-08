@@ -833,6 +833,14 @@ const posts = [
             tags.LITTLE_MOMENTS,
         ],
         src: './posts/2024/241027.js'
+    },
+    {   id: 241030, year: 2024, month: 10, day: 30,
+        menuText: "North Fence Cleanup",
+        tags: [
+            tags.CLEAN_UP,
+            tags.YARD,
+        ],
+        src: './posts/2024/241030.js'
     }
 ]
 
