@@ -805,6 +805,15 @@ const posts = [
             tags.YARD_UPDATE,
         ],
         src: './posts/2024/241020.js'
+    },
+    {   id: 241021, year: 2024, month: 10, day: 21,
+        menuText: "Frontyard Update",
+        tags: [
+            tags.PROJECTS,
+            tags.YARD,
+            tags.YARD_UPDATE,
+        ],
+        src: './posts/2024/241021.js'
     }
 ]
 
