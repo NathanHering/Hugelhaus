@@ -824,6 +824,15 @@ const posts = [
             tags.REPAIRS,
         ],
         src: './posts/2024/241025.js'
+    },
+,
+    {   id: 241027, year: 2024, month: 10, day: 27,
+        menuText: "Perfect Game",
+        tags: [
+            tags.FRIENDS_FAMILY,
+            tags.LITTLE_MOMENTS,
+        ],
+        src: './posts/2024/241027.js'
     }
 ]
 
