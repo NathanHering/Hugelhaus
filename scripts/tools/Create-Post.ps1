@@ -12,9 +12,7 @@ $ErrorActionPreference = 'Stop'
 function Get-SlidesForImages {
     param(
         [Parameter(Mandatory = $true)]
-        $Images,
-        [Parameter(Mandatory = $true)]
-        $PostDate
+        $Images
     )
 
     $slides = New-Object System.Collections.ArrayList
@@ -24,8 +22,13 @@ function Get-SlidesForImages {
         $webPath = if ($image.PSObject.Properties.Name -contains 'webPath' -and $image.webPath) {
             [string]$image.webPath
         } else {
-            $outputName = if ($image.PSObject.Properties.Name -contains 'outputName' -and $image.outputName) { [string]$image.outputName } else { [System.IO.Path]::GetFileName([string]$image.sourcePath) }
-            "/images/$($PostDate.YearText)/$($PostDate.MonthText)/$outputName"
+            if (-not ($image.PSObject.Properties.Name -contains 'sourcePath') -or -not $image.sourcePath) {
+                throw 'Image is missing required property: sourcePath'
+            }
+
+            $outputName = [System.IO.Path]::GetFileName([string]$image.sourcePath)
+            $imageDate = Get-ImageDatePartsFromFileName -FileName $outputName
+            "/images/$($imageDate.YearText)/$($imageDate.MonthText)/$outputName"
         }
 
         $caption = if ($image.PSObject.Properties.Name -contains 'caption') { [string]$image.caption } else { '' }
@@ -62,7 +65,7 @@ function Get-PostFileContent {
         if (@($section.images).Count -gt 0) {
             $slideVarName = "slides_$($PostDate.Id)$(Get-SlideSuffix -Index $sectionIndex)"
             $slideDeclarations.Add("let $slideVarName = JSON.stringify([")
-            foreach ($slide in (Get-SlidesForImages -Images $section.images -PostDate $PostDate)) {
+            foreach ($slide in (Get-SlidesForImages -Images $section.images)) {
                 $slideDeclarations.Add("    ['$($slide.WebPath)','$($slide.Caption)'],")
             }
             $slideDeclarations.Add('])')

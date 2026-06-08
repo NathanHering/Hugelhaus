@@ -161,6 +161,35 @@ function Resolve-UniqueFileName {
     return $candidate
 }
 
+function Get-ImageDatePartsFromFileName {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$FileName
+    )
+
+    $name = [System.IO.Path]::GetFileNameWithoutExtension($FileName)
+    if ($name.Length -lt 6) {
+        throw "Image file name must begin with YYYYMM: $FileName"
+    }
+
+    $prefix = $name.Substring(0, 6)
+    if ($prefix -notmatch '^\d{6}$') {
+        throw "Image file name must begin with YYYYMM: $FileName"
+    }
+
+    $yearText = $prefix.Substring(0, 4)
+    $monthText = $prefix.Substring(4, 2)
+    $month = [int]$monthText
+    if ($month -lt 1 -or $month -gt 12) {
+        throw "Image file name has invalid month in YYYYMM prefix: $FileName"
+    }
+
+    return [pscustomobject]@{
+        YearText = $yearText
+        MonthText = $monthText
+    }
+}
+
 function Invoke-ImageMagickResize {
     param(
         [Parameter(Mandatory = $true)]
