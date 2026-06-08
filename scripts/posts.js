@@ -814,6 +814,16 @@ const posts = [
             tags.YARD_UPDATE,
         ],
         src: './posts/2024/241021.js'
+    },
+    {   id: 241025, year: 2024, month: 10, day: 25,
+        menuText: "New Windows",
+        tags: [
+            tags.BEDROOM,
+            tags.IMPROVEMENTS,
+            tags.LIVINGROOM,
+            tags.REPAIRS,
+        ],
+        src: './posts/2024/241025.js'
     }
 ]
 
