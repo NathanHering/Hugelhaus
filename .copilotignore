@@ -1,0 +1,2 @@
+# Disable Copilot suggestions in queued post specs only
+post_queue/current/*.json

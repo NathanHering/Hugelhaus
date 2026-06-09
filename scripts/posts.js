@@ -849,6 +849,12 @@ const posts = [
             tags.LITTLE_MOMENTS,
         ],
         src: './posts/2024/241104.js'
+    },
+    {   id: 241105, year: 2024, month: 11, day: 5,
+        menuText: "North Rubble",
+        tags: [
+        ],
+        src: './posts/2024/241105.js'
     }
 ]
 
