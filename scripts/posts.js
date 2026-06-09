@@ -855,6 +855,47 @@ const posts = [
         tags: [
         ],
         src: './posts/2024/241105.js'
+    },
+    {   id: 250130, year: 2025, month: 1, day: 30,
+        menuText: "Cat Loft",
+        tags: [
+            tags.ANIMALS,
+            tags.LITTLE_MOMENTS,
+        ],
+        src: './posts/2025/250130.js'
+    },
+    {   id: 250508, year: 2025, month: 5, day: 8,
+        menuText: "Spider-Cat",
+        tags: [
+            tags.ANIMALS,
+            tags.LITTLE_MOMENTS,
+        ],
+        src: './posts/2025/250508.js'
+    },
+    {   id: 251111, year: 2025, month: 11, day: 11,
+        menuText: "Tucked In (again)",
+        tags: [
+            tags.ANIMALS,
+            tags.LITTLE_MOMENTS,
+        ],
+        src: './posts/2025/251111.js'
+    },
+    {   id: 260130, year: 2026, month: 1, day: 30,
+        menuText: "Hang over",
+        tags: [
+            tags.ANIMALS,
+            tags.LITTLE_MOMENTS,
+        ],
+        src: './posts/2026/260130.js'
+    },
+    {   id: 250311, year: 2025, month: 3, day: 11,
+        menuText: "Chunks of Stump",
+        tags: [
+            tags.CLEAN_UP,
+            tags.PROJECTS,
+            tags.YARD,
+        ],
+        src: './posts/2025/250311.js'
     }
 ]
 
