@@ -119,11 +119,7 @@ function Get-OrderedImages {
         $Images
     )
 
-    return @($Images | Sort-Object -Property @{ Expression = {
-        if ($_.PSObject.Properties.Name -contains 'order' -and $null -ne $_.order) { [int]$_.order } else { [int]::MaxValue }
-    } }, @{ Expression = {
-        if ($_.PSObject.Properties.Name -contains 'sourcePath' -and $_.sourcePath) { [string]$_.sourcePath } else { '' }
-    } })
+    return @($Images)
 }
 
 function New-DirectoryIfMissing {

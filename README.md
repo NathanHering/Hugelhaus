@@ -27,18 +27,20 @@ Preferred shape for complex posts is section-based:
 		{
 			"paragraphs": ["Paragraphs before first slide set."],
 			"images": [
-				{ "order": 1, "sourcePath": "post_queue/2026/a.jpg", "caption": "A" }
+				{ "sourcePath": "post_queue/2026/a.jpg", "caption": "A" }
 			]
 		},
 		{
 			"paragraphs": ["More text before another slide set."],
 			"images": [
-				{ "order": 1, "sourcePath": "post_queue/2026/b.jpg", "caption": "B" }
+				{ "sourcePath": "post_queue/2026/b.jpg", "caption": "B" }
 			]
 		}
 	]
 }
 ```
+
+Images are rendered in the same order they appear in each `sections[].images[]` array.
 
 The older flat shape (`bodyParagraphs` + `images`) is still supported for simple posts.
 
@@ -55,7 +57,7 @@ The older flat shape (`bodyParagraphs` + `images`) is still supported for simple
 ```
 
 This command resizes images to width 1000 and writes them to `images/YYYY/MM` based on the first six characters of each source file name (`YYYYMM`).
-The output file name is always the same as the source file name, and the spec is updated with matching `webPath` values.
+The output file name is always the same as the source file name, and the spec is updated with `processedPath` values.
 
 ### 3) Generate Post File
 

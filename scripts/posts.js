@@ -841,6 +841,14 @@ const posts = [
             tags.YARD,
         ],
         src: './posts/2024/241030.js'
+    },
+    {   id: 241104, year: 2024, month: 11, day: 4,
+        menuText: "Vole Feeder?",
+        tags: [
+            tags.ANIMALS,
+            tags.LITTLE_MOMENTS,
+        ],
+        src: './posts/2024/241104.js'
     }
 ]
 
