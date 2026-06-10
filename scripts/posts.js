@@ -896,6 +896,14 @@ const posts = [
             tags.YARD,
         ],
         src: './posts/2025/250311.js'
+    },
+    {   id: 250313, year: 2025, month: 3, day: 13,
+        menuText: "Thorn Removal",
+        tags: [
+            tags.CLEAN_UP,
+            tags.YARD,
+        ],
+        src: './posts/2025/250313.js'
     }
 ]
 
